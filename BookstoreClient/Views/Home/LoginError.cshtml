@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+@model BookstoreClient.Models.UserModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BookstoreClient.styles.css" asp-append-version="true" />
+    <title>Login Error</title>
+</head>
+<body class="container">
+    <div class="pb-3">
+
+
+
+
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1>Login Error</h1>
+
+<h4>Email or Password are wrong or Account does not exist</h4>
+        <div>
+            <a asp-action="Login">Back to Login Screen</a>
+        </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+    </div>
+</body>
+</html>
